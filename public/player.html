@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Partial Content Demo</title>
+    <script>
+        function onLoad() {
+            var player = document.querySelector('#player');
+            var sec = parseInt(document.location.search.substr(1));
+            if (!isNaN(sec))
+                player.currentTime = sec;
+        }
+    </script>
+</head>
+<body>
+    <h3>Partial Content Demo</h3>
+    <hr/>
+    <!--
+    <audio id="player"
+           autoplay="autoplay" controls="controls" onloadedmetadata="onLoad()">
+        <source src="avs/kalimba.mp3" />
+    </audio>
+    -->
+    <video id="player"
+           autoplay="autoplay" controls="controls" onloadedmetadata="onLoad()">
+        <source src="avs/toystory.mp4" />
+    </video>
+</body>
+</html>
